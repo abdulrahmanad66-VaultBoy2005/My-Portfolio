@@ -135,27 +135,29 @@
 
   .skill-row-meta { display: flex; flex-direction: column; justify-content: center; }
   .skill-row-icon { font-size: 1.25rem; margin-bottom: 8px; }
-  .skill-row-cat { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 2.5px; color: var(--gold); text-transform: uppercase; margin-bottom: 4px; display: block; }
-  .skill-row-count { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 1px; color: var(--text-faint); }
+  .skill-row-cat { font-family: 'DM Serif Display', serif; font-size: 1.15rem; letter-spacing: 0.3px; color: var(--white); text-transform: none; margin-bottom: 4px; display: block; }
+  .skill-row-count { font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 1px; color: var(--text-faint); }
 
   .skill-row-right {
     padding: 32px 0 32px 36px;
-    display: flex; flex-wrap: wrap; gap: 10px; align-content: center;
+    display: flex; flex-wrap: wrap; gap: 12px; align-content: center;
   }
 
   .stag {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.63rem; letter-spacing: 0.5px;
-    color: var(--text-muted);
-    border: 1px solid rgba(249,115,22,0.14);
-    background: rgba(249,115,22,0.03);
-    padding: 7px 15px;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: var(--gold);
+    border: 1px solid rgba(249,115,22,0.35);
+    background: rgba(249,115,22,0.08);
+    padding: 9px 18px;
     border-radius: 2px;
     transition: all 0.18s;
     cursor: default;
   }
-  .stag:hover { color: var(--gold-light); border-color: rgba(249,115,22,0.4); background: rgba(249,115,22,0.08); }
-  .stag.featured { color: var(--gold); border-color: rgba(249,115,22,0.32); background: rgba(249,115,22,0.07); }
+  .stag:hover { color: #fff; border-color: rgba(249,115,22,0.7); background: rgba(249,115,22,0.18); }
+  .stag.featured { color: var(--gold); border-color: rgba(249,115,22,0.35); background: rgba(249,115,22,0.08); }
 
   /* PROJECTS */
   #projects { background: var(--ink2); }
@@ -685,6 +687,44 @@
   Chatbot.init({
     chatflowid: "5c07b7ee-ace0-461e-b9b5-9ffc3449d88c",
     apiHost: "https://cloud.flowiseai.com",
+    theme: {
+      button: {
+        backgroundColor: "#f97316",
+        right: 20,
+        bottom: 20,
+        size: 52,
+        iconColor: "#ffffff"
+      },
+      chatWindow: {
+        showTitle: true,
+        title: "Abdul's Assistant",
+        welcomeMessage: "Hi! I'm Abdul Rahman's AI assistant. Ask me anything about his skills, projects, or experience.",
+        errorMessage: "Something went wrong. Please try again.",
+        backgroundColor: "#0a0a0f",
+        height: 520,
+        width: 380,
+        fontSize: 14,
+        botMessage: {
+          backgroundColor: "#16161f",
+          textColor: "#d8d8e8",
+          showAvatar: false
+        },
+        userMessage: {
+          backgroundColor: "#f97316",
+          textColor: "#ffffff",
+          showAvatar: false
+        },
+        textInput: {
+          placeholder: "Ask about Abdul's experience...",
+          backgroundColor: "#16161f",
+          textColor: "#d8d8e8",
+          sendButtonColor: "#f97316"
+        },
+        feedback: {
+          color: "#f97316"
+        }
+      }
+    }
   })
 </script>
 </body>
